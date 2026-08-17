@@ -17,6 +17,12 @@
    14. Responsive breakpoints
    ========================================================================== */
 
+
+
+/* Import Fonts */
+/* @import url('https://db.onlinewebfonts.com/c/f22b58a4bff8e3762aa3c72782085dff?family=Crepes+French'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
 /* ------------------------- 1. Tokens & resets ------------------------- */
 :root {
   /* CABELKI brand palette */
@@ -33,8 +39,11 @@
   --text: #5A3528;         /* Chocolate — textos, logo y contraste */
   --muted-text: #8B5E4A;   /* Café medio — textos secundarios y elementos gráficos */
 
-  --font-display: "Playfair Display", "Georgia", serif;
-  --font-body: "Montserrat", "Helvetica Neue", sans-serif;
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  /* --font-display: "Playfair Display", "Georgia", serif; */
+  /* --font-body: "Montserrat", "Helvetica Neue", sans-serif; */
+  --font-body: "Lato", "Helvetica Neue", sans-serif;
+
 
   --shadow-soft: 0 10px 30px rgba(90, 53, 40, 0.08);
   --shadow-lift: 0 18px 40px rgba(90, 53, 40, 0.14);
@@ -417,13 +426,16 @@ p { margin: 0; }
   color: var(--rose);
 }
 
-.scallop-divider {
-  height: 34px;
+.hero-divider {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 0 24px 56px;
+  color: var(--gold);
+}
+.hero-divider svg {
   width: 100%;
-  background-image: radial-gradient(circle at 10px 0, transparent 12px, var(--surface) 13px);
-  background-size: 24px 24px;
-  background-position: top;
-  background-repeat: repeat-x;
+  height: auto;
+  display: block;
 }
 
 /* ------------------------- 6. Menu sections & product cards ------------------------- */
@@ -504,15 +516,6 @@ p { margin: 0; }
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--gold-dark);
-}
-
-.currency {
-  font-family: var(--font-body);
-  font-size: 0.5em;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--muted-text);
-  vertical-align: middle;
 }
 
 /* ------------------------- 7. Toppings grid ------------------------- */

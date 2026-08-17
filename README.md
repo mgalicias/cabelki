@@ -96,7 +96,7 @@ No necesitas tocar `styles.css` ni `script.js` — cada crêpe es un bloque de H
      <div class="card-body">
        <h3 class="card-title">Banana Bliss</h3>
        <p class="card-desc">Plátano, nutella, coco rallado y chocolate líquido.</p>
-       <p class="card-price">$93 <span class="currency">MXN</span></p>
+       <p class="card-price">$93</p>
      </div>
    </article>
    ```
@@ -106,7 +106,7 @@ No necesitas tocar `styles.css` ni `script.js` — cada crêpe es un bloque de H
    - El `alt="..."` → una descripción corta de la foto.
    - `<h3 class="card-title">` → el nombre del sabor.
    - `<p class="card-desc">` → los ingredientes.
-   - `<p class="card-price">` → el precio (mantén el `<span class="currency">MXN</span>` para que se vea igual que los demás).
+   - `<p class="card-price">` → el precio.
    - La clase `placeholder-sweet` del `<div class="card-image ...">` según la sección: usa `placeholder-signature`, `placeholder-sweet` o `placeholder-savory`.
 
 4. Si quieres que destaque con una etiqueta como "★ Favoritas", agrega dentro de `card-image`:
@@ -145,6 +145,6 @@ Para cambiar de opción:
 ## 7. Notas de diseño
 
 - **Paleta de marca CABELKI**: Rosa CABELKI `#E8A6B8`, Rosa pastel `#F6D6DE`, Crema `#FFF5E8`, Chocolate `#5A3528`, Café medio `#8B5E4A`, Champagne `#D9B98C` y Beige rosado `#E7C9C0`. Todos los colores viven como variables en `:root` al inicio de `styles.css` (por ejemplo `--rose`, `--gold`, `--brown`) — cambiar un valor ahí actualiza todo el sitio.
-- Los precios se muestran en pesos mexicanos, con la etiqueta `MXN` junto a cada precio (clase `.currency` en `styles.css`).
+- Los precios se muestran en pesos mexicanos (sin necesidad de la etiqueta "MXN" junto al número).
 - El sitio respeta `prefers-reduced-motion`, tiene foco de teclado visible y navegación accesible por teclado.
 - El botón **"Ordenar ahora"** (sección Contacto) abre WhatsApp directo al número de CABELKI con un mensaje de pedido ya escrito. El botón **"Ver Facebook"** e **"Ver Instagram"** llevan a los perfiles oficiales del negocio.
