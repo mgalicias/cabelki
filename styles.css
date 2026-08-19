@@ -19,10 +19,6 @@
 
 
 
-/* Import Fonts */
-/* @import url('https://db.onlinewebfonts.com/c/f22b58a4bff8e3762aa3c72782085dff?family=Crepes+French'); */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-
 /* ------------------------- 1. Tokens & resets ------------------------- */
 :root {
   /* CABELKI brand palette */
@@ -39,11 +35,9 @@
   --text: #5A3528;         /* Chocolate — textos, logo y contraste */
   --muted-text: #8B5E4A;   /* Café medio — textos secundarios y elementos gráficos */
 
+  /* Tipografía: se carga vía <link> de Google Fonts en index.html <head> */
   --font-display: "Cormorant Garamond", "Georgia", serif;
-  /* --font-display: "Playfair Display", "Georgia", serif; */
-  /* --font-body: "Montserrat", "Helvetica Neue", sans-serif; */
   --font-body: "Lato", "Helvetica Neue", sans-serif;
-
 
   --shadow-soft: 0 10px 30px rgba(90, 53, 40, 0.08);
   --shadow-lift: 0 18px 40px rgba(90, 53, 40, 0.14);
@@ -518,6 +512,131 @@ p { margin: 0; }
   color: var(--gold-dark);
 }
 
+/* Crêpe al Gusto — feature card */
+.feature-card {
+  position: relative;
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.feature-flourish {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  color: var(--rose);
+  opacity: 0.7;
+  z-index: 2;
+}
+.feature-flourish svg { width: 100%; height: 100%; fill: none; stroke: none; }
+.feature-flourish svg circle { fill: currentColor; }
+.feature-flourish--tl { top: 14px; left: 14px; }
+.feature-flourish--br {
+  bottom: 14px;
+  right: 14px;
+  transform: rotate(180deg);
+  color: var(--gold);
+}
+
+.feature-image {
+  position: relative;
+  min-height: 260px;
+  background: var(--rose-light);
+  overflow: hidden;
+}
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.feature-image.placeholder-signature { background: linear-gradient(150deg, var(--gold-light), var(--rose-light)); }
+.feature-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='26' fill='none' stroke='%235A3528' stroke-opacity='0.28' stroke-width='1.3'/%3E%3Cpath d='M24 50a26 26 0 0 0 52 0' fill='none' stroke='%235A3528' stroke-opacity='0.28' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34%;
+  transition: opacity 0.3s ease;
+}
+.feature-image.no-image::after { opacity: 1; }
+
+.feature-body {
+  padding: 44px 48px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+.feature-title {
+  font-size: 1.7rem;
+  font-style: italic;
+}
+.feature-price-badge {
+  background: var(--rose);
+  color: var(--brown);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 8px 22px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+}
+
+.feature-select-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--brown);
+}
+.feature-select-sub {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: var(--muted-text);
+  margin-top: -8px;
+}
+
+.feature-option-line {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.feature-option-line strong { font-weight: 600; }
+
+.feature-plus {
+  color: var(--gold-dark);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.feature-note {
+  margin-top: 6px;
+  color: var(--muted-text);
+  font-size: 0.88rem;
+}
+
 /* ------------------------- 7. Toppings grid ------------------------- */
 .toppings-grid {
   max-width: 720px;
@@ -744,6 +863,10 @@ p { margin: 0; }
   .card-grid--combos { grid-template-columns: repeat(2, 1fr); }
   .combo-card--wide { flex-direction: column; text-align: center; gap: 10px; }
 
+  .feature-card { grid-template-columns: 1fr; }
+  .feature-image { min-height: 220px; }
+  .feature-body { padding: 36px 32px; }
+
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
@@ -794,6 +917,10 @@ p { margin: 0; }
   .combo-card--wide { grid-column: span 1; }
 
   .toppings-grid { grid-template-columns: 1fr; }
+
+  .feature-body { padding: 30px 22px; }
+  .feature-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .feature-flourish { width: 44px; height: 44px; }
 
   .footer-inner { grid-template-columns: 1fr; text-align: center; }
   .footer-note, .footer-col { align-items: center; }

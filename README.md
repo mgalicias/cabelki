@@ -22,18 +22,20 @@ cabelki-crepes/
 
 El sitio ya está listo para mostrar fotos reales: cada tarjeta apunta a un archivo dentro de `assets/crepes/`. Mientras no exista el archivo, la tarjeta muestra automáticamente un fondo degradado elegante con un pequeño ícono de crêpe (no verás un ícono de "imagen rota").
 
-Guarda tus fotos con **estos nombres exactos**, en formato `.jpg` (idealmente 1200×900 px o proporción 4:3, buena luz, fondo limpio):
+Guarda tus fotos con **estos nombres exactos** (idealmente 1200×900 px o proporción 4:3, buena luz, fondo limpio). Puedes usar `.jpg`, `.jpeg` o `.png` — solo asegúrate de que la extensión en el archivo coincida con la que usa `index.html`:
 
-| Archivo a guardar en `assets/crepes/` | Producto |
-|---|---|
-| `hero-crepe.jpg` | Foto principal del hero (la más atractiva, para la portada) |
-| `red-velvet-berry.jpg` | Red Velvet Berry |
-| `apple-pie-supreme.jpg` | Apple Pie Supreme |
-| `banana-bliss.jpg` | Banana Bliss |
-| `strawberry-cream.jpg` | Strawberry Cream |
-| `nutty-golden.jpg` | Nutty Golden |
-| `pepperoni-melt.jpg` | Pepperoni Melt |
-| `aloha-delight.jpg` | Aloha Delight |
+| Archivo en `assets/crepes/` | Producto | Estado |
+|---|---|---|
+| `hero-crepe.png` | Logo/imagen principal del hero | ✅ Ya subida |
+| `red-velvet-berry.jpg` | Red Velvet Berry | ✅ Ya subida |
+| `apple-pie-supreme.jpg` | Apple Pie Supreme | ✅ Ya subida |
+| `banana-bliss.jpeg` | Banana Bliss | ✅ Ya subida |
+| `strawberry-cream.jpg` | Strawberry Cream | ✅ Ya subida |
+| `choco-berry-blizz.jpeg` | Choco Berry Blizz | ✅ Ya subida |
+| `nutty-golden.jpg` | Nutty Golden | ✅ Ya subida |
+| `pepperoni-melt.jpeg` | Pepperoni Melt | ✅ Ya subida |
+| `aloha-delight.jpg` | Aloha Delight | ✅ Ya subida |
+| `crepe-al-gusto.jpg` | Crêpe al Gusto (sección "arma tu crêpe") | ⏳ Pendiente — hoy muestra un placeholder |
 
 En cuanto subas un archivo con el nombre correcto, la imagen reemplaza automáticamente el placeholder — no necesitas tocar el código HTML.
 
@@ -120,31 +122,34 @@ No necesitas tocar `styles.css` ni `script.js` — cada crêpe es un bloque de H
 
 ## 6. Opciones de tipografía
 
-El sitio usa **Playfair Display** (títulos) + **Montserrat** (texto) por defecto. Si quieres probar otro estilo, aquí tienes 3 combinaciones alternativas — todas son gratuitas en Google Fonts y encajan con la estética boutique/elegante del sitio:
+El sitio usa actualmente **Cormorant Garamond** (títulos) + **Lato** (texto) — un estilo más delicado y romántico. Si quieres probar otro estilo, aquí tienes alternativas — todas gratuitas en Google Fonts y afines a la estética boutique del sitio:
 
 | Opción | Títulos | Texto | Sensación |
 |---|---|---|---|
-| **Actual** | Playfair Display | Montserrat | Editorial clásico, elegante y muy legible |
-| **1 — Romántico** | Cormorant Garamond | Lato | Más delicado y ligero, letras finas, ideal si quieres un toque aún más femenino |
+| **Actual** | Cormorant Garamond | Lato | Delicado y ligero, letras finas, toque femenino |
+| **1 — Editorial clásico** | Playfair Display | Montserrat | El estilo original del sitio — elegante y muy legible |
 | **2 — Moderno boutique** | DM Serif Display | Poppins | Serif con más carácter/contraste, combinado con una sans redondeada y amigable |
-| **3 — Cálido artesanal** | Fraunces | Nunito Sans | Serif con personalidad "hecho a mano", cálido, menos formal que Playfair |
+| **3 — Cálido artesanal** | Fraunces | Nunito Sans | Serif con personalidad "hecho a mano", cálido, menos formal |
 
 Para cambiar de opción:
 
-1. En `index.html`, reemplaza la línea de Google Fonts (dentro de `<head>`) por la combinación elegida, por ejemplo para la opción 1:
+1. En `index.html`, reemplaza la línea de Google Fonts (dentro de `<head>`) por la combinación elegida, por ejemplo para volver a la opción 1 (Playfair + Montserrat):
    ```html
-   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    ```
 2. En `styles.css`, dentro de `:root`, actualiza:
    ```css
-   --font-display: "Cormorant Garamond", "Georgia", serif;
-   --font-body: "Lato", "Helvetica Neue", sans-serif;
+   --font-display: "Playfair Display", "Georgia", serif;
+   --font-body: "Montserrat", "Helvetica Neue", sans-serif;
    ```
-3. Guarda y recarga — el cambio aplica a todo el sitio automáticamente (nada más necesita tocarse).
+3. Guarda y recarga — el cambio aplica a todo el sitio automáticamente.
+
+> ⚠️ Importante: los nombres de fuente en `--font-display` / `--font-body` solo funcionan si esa misma fuente está cargada en el `<link>` de Google Fonts en `<head>`. Si cambias uno sin el otro, el navegador cae de vuelta a una fuente genérica (Georgia o Helvetica) sin avisar — por eso siempre se cambian los dos juntos.
 
 ## 7. Notas de diseño
 
 - **Paleta de marca CABELKI**: Rosa CABELKI `#E8A6B8`, Rosa pastel `#F6D6DE`, Crema `#FFF5E8`, Chocolate `#5A3528`, Café medio `#8B5E4A`, Champagne `#D9B98C` y Beige rosado `#E7C9C0`. Todos los colores viven como variables en `:root` al inicio de `styles.css` (por ejemplo `--rose`, `--gold`, `--brown`) — cambiar un valor ahí actualiza todo el sitio.
 - Los precios se muestran en pesos mexicanos (sin necesidad de la etiqueta "MXN" junto al número).
+- La sección **"Crêpe al Gusto"** (después de Crêpes Saladas) es una tarjeta destacada de "arma tu crêpe": 1 base a elegir entre 4 + 1 topping a elegir entre 4, por $83. No es interactiva (no hay que hacer clic para seleccionar) — es informativa, igual que el resto del menú.
 - El sitio respeta `prefers-reduced-motion`, tiene foco de teclado visible y navegación accesible por teclado.
 - El botón **"Ordenar ahora"** (sección Contacto) abre WhatsApp directo al número de CABELKI con un mensaje de pedido ya escrito. El botón **"Ver Facebook"** e **"Ver Instagram"** llevan a los perfiles oficiales del negocio.

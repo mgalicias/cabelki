@@ -17,7 +17,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -73,7 +73,7 @@
 
         <div class="hero-visual reveal" aria-hidden="false">
           <div class="hero-blob">
-            <img src="assets/crepes/hero-crepe.png" alt="Crêpe Signature de CABELKI, doblada y bañada en salsa, decorada con frutos rojos" class="hero-image" onerror="this.style.display='none'; this.closest('.hero-blob').classList.add('no-image')">
+            <img src="assets/crepes/hero-crepe.png" alt="Logo de CABELKI Crêpes" class="hero-image" onerror="this.style.display='none'; this.closest('.hero-blob').classList.add('no-image')">
           </div>
           <span class="hero-ring" aria-hidden="true"></span>
           <span class="hero-flourish" aria-hidden="true">
@@ -160,12 +160,12 @@
         <div class="card-grid card-grid--3">
           <article class="product-card reveal">
             <div class="card-image placeholder-sweet">
-              <img src="assets/crepes/choco-berry-blizz.jpeg" alt="Crêpe Choco Berry Blizz con fresas frescas, Nutella, queso crema, chocolate liquido y granillo de Chocoloate" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
-              <span class="card-badge">&#9733; Favoritas</span>
+              <img src="assets/crepes/choco-berry-blizz.jpeg" alt="Crêpe Choco Berry Blizz con fresas frescas, Nutella, queso crema, chocolate líquido y granillo de chocolate" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+              <span class="card-badge">&#9733; Nuevo</span>
             </div>
             <div class="card-body">
               <h3 class="card-title">Choco Berry Blizz</h3>
-              <p class="card-desc">Fresas frescas, Nutella, queso crema, chocolate liquido y granillo de Chocoloate.</p>
+              <p class="card-desc">Fresas frescas, Nutella, queso crema, chocolate líquido y granillo de chocolate.</p>
               <p class="card-price">$93</p>
             </div>
           </article>
@@ -183,7 +183,7 @@
 
           <article class="product-card reveal">
             <div class="card-image placeholder-sweet">
-              <img src="assets/crepes/strawberry-cream.png" alt="Crêpe Strawberry Cream con fresas frescas y queso crema" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+              <img src="assets/crepes/strawberry-cream.jpg" alt="Crêpe Strawberry Cream con fresas frescas y queso crema" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
             </div>
             <div class="card-body">
               <h3 class="card-title">Strawberry Cream</h3>
@@ -254,6 +254,53 @@
     </section>
 
     <!-- =========================================================
+         CRÊPE AL GUSTO — build-your-own feature card
+    ========================================================== -->
+    <section class="menu-section" id="crepe-al-gusto">
+      <div class="section-inner">
+        <div class="feature-card reveal">
+          <span class="feature-flourish feature-flourish--tl" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="3"/>
+              <circle cx="21" cy="15" r="2.2"/>
+              <circle cx="31" cy="26" r="1.5"/>
+              <path d="M6 32 Q 0 15 20 9" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </span>
+          <span class="feature-flourish feature-flourish--br" aria-hidden="true">
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="3"/>
+              <circle cx="21" cy="15" r="2.2"/>
+              <circle cx="31" cy="26" r="1.5"/>
+              <path d="M6 32 Q 0 15 20 9" fill="none" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </span>
+
+          <div class="feature-image placeholder-signature">
+            <img src="assets/crepes/crepe-al-gusto.png" alt="Crêpe al Gusto armada con base y topping a elegir" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+          </div>
+
+          <div class="feature-body">
+            <div class="feature-header">
+              <h3 class="feature-title">Crêpe al Gusto</h3>
+              
+              <span class="feature-price-badge">$83</span>
+            </div>
+
+            <p class="feature-select-label">Selecciona:</p>
+            <p class="feature-select-sub">1 base + 1 topping</p>
+
+            <p class="feature-option-line"><strong>Queso Crema, Dulce de Leche, Mermelada de la Casa</strong> o <strong>Nutella</strong></p>
+            <span class="feature-plus" aria-hidden="true">+</span>
+            <p class="feature-option-line"><strong>Nuez, Coco rallado, Granillo Turín</strong> o <strong>Galleta Oreo</strong></p>
+
+            <p class="feature-note">Agregar toppings extras desde $10.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
          TOPPINGS EXTRAS
     ========================================================== -->
     <section class="menu-section menu-section--alt">
@@ -306,26 +353,26 @@
 
           <article class="combo-card combo-card--gold reveal">
             <h3 class="combo-title">Combo Cabelki</h3>
-            <p class="combo-desc">1 Crêpe Salada/Dulce + 1 Bebida a elegir</p>
-            <p class="combo-price">$134</p>
+            <p class="combo-desc">1 Crêpe Salada/Dulce + 1 Bebida</p>
+            <p class="combo-price">$124</p>
           </article>
 
           <article class="combo-card combo-card--gold reveal">
             <h3 class="combo-title">Combo Signature</h3>
-            <p class="combo-desc">1 Crêpe Signature + 1 Bebida (Americano/Capuccino) + Helado</p>
-            <p class="combo-price">$162</p>
+            <p class="combo-desc">1 Crêpe Premium + 1 Bebida + 1 Topping</p>
+            <p class="combo-price">$145</p>
           </article>
 
           <article class="combo-card combo-card--wide combo-card--gold reveal">
-            <h3 class="combo-title">Combo Compartir Cabelki</h3>
-            <p class="combo-desc">2 Crêpes Saladas/Dulces + 2 Bebidas a elegir</p>
-            <p class="combo-price">$267</p>
+            <h3 class="combo-title">Combo Compartir Clásico</h3>
+            <p class="combo-desc">2 Crêpes Clásicas + 2 Bebidas</p>
+            <p class="combo-price">$229</p>
           </article>
 
           <article class="combo-card combo-card--wide combo-card--gold reveal">
             <h3 class="combo-title">Combo Compartir Signature</h3>
-            <p class="combo-desc">2 Crêpes Signature + 2 Bebidas a elegir</p>
-            <p class="combo-price">$297</p>
+            <p class="combo-desc">2 Crêpes Premium + 2 Bebidas</p>
+            <p class="combo-price">$259</p>
           </article>
 
         </div>
@@ -366,7 +413,7 @@
               <svg viewBox="0 0 48 48"><path d="M10 18h24v14a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8V18Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M34 21h3a5 5 0 0 1 0 10h-3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
             </div>
             <h3 class="card-title">Café Americano <span class="drink-size">(12 oz)</span></h3>
-            <p class="card-price">$39</p>
+            <p class="card-price">$41</p>
           </article>
 
           <article class="drink-card reveal">
@@ -374,7 +421,7 @@
               <svg viewBox="0 0 48 48"><path d="M10 18h24v14a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8V18Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M34 21h3a5 5 0 0 1 0 10h-3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="14" r="2" fill="currentColor"/><circle cx="17" cy="10" r="1.5" fill="currentColor"/><circle cx="27" cy="10" r="1.5" fill="currentColor"/></svg>
             </div>
             <h3 class="card-title">Capuccino <span class="drink-size">(12 oz)</span></h3>
-            <p class="card-price">$49</p>
+            <p class="card-price">$51</p>
           </article>
 
         </div>
