@@ -637,6 +637,9 @@ p { margin: 0; }
   font-size: 0.88rem;
 }
 
+/* Fresas con Crema — toppings list spacing under the feature card */
+#fresas-con-crema .toppings-grid { margin-top: 56px; }
+
 /* ------------------------- 7. Toppings grid ------------------------- */
 .toppings-grid {
   max-width: 720px;

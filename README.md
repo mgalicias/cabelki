@@ -36,6 +36,7 @@ Guarda tus fotos con **estos nombres exactos** (idealmente 1200×900 px o propor
 | `pepperoni-melt.jpeg` | Pepperoni Melt | ✅ Ya subida |
 | `aloha-delight.jpg` | Aloha Delight | ✅ Ya subida |
 | `crepe-al-gusto.jpg` | Crêpe al Gusto (sección "arma tu crêpe") | ⏳ Pendiente — hoy muestra un placeholder |
+| `fresas-con-crema.png` | Fresas con Crema (vaso, sección `#fresas-con-crema`) | ✅ Ya subida |
 
 En cuanto subas un archivo con el nombre correcto, la imagen reemplaza automáticamente el placeholder — no necesitas tocar el código HTML.
 
@@ -151,5 +152,6 @@ Para cambiar de opción:
 - **Paleta de marca CABELKI**: Rosa CABELKI `#E8A6B8`, Rosa pastel `#F6D6DE`, Crema `#FFF5E8`, Chocolate `#5A3528`, Café medio `#8B5E4A`, Champagne `#D9B98C` y Beige rosado `#E7C9C0`. Todos los colores viven como variables en `:root` al inicio de `styles.css` (por ejemplo `--rose`, `--gold`, `--brown`) — cambiar un valor ahí actualiza todo el sitio.
 - Los precios se muestran en pesos mexicanos (sin necesidad de la etiqueta "MXN" junto al número).
 - La sección **"Crêpe al Gusto"** (después de Crêpes Saladas) es una tarjeta destacada de "arma tu crêpe": 1 base a elegir entre 4 + 1 topping a elegir entre 4, por $83. No es interactiva (no hay que hacer clic para seleccionar) — es informativa, igual que el resto del menú.
+- La sección **"Fresas con Crema"** (`id="fresas-con-crema"`, entre "Crêpe al Gusto" y "Toppings Extras") reutiliza la misma tarjeta destacada (`feature-card`) que "Crêpe al Gusto" para mostrar el vaso de 500ml por $115, y debajo repite la misma lista de toppings extras (`toppings-grid`) con sus precios individuales, ya que este producto también admite toppings extra.
 - El sitio respeta `prefers-reduced-motion`, tiene foco de teclado visible y navegación accesible por teclado.
 - El botón **"Ordenar ahora"** (sección Contacto) abre WhatsApp directo al número de CABELKI con un mensaje de pedido ya escrito. El botón **"Ver Facebook"** e **"Ver Instagram"** llevan a los perfiles oficiales del negocio.
