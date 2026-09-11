@@ -441,7 +441,7 @@ p { margin: 0; }
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 .product-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) rotate(0.4deg);
   box-shadow: var(--shadow-lift);
 }
 
@@ -511,6 +511,16 @@ p { margin: 0; }
   font-weight: 700;
   color: var(--gold-dark);
 }
+
+.price-currency {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: var(--muted-text);
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
 
 /* Crêpe al Gusto — feature card */
 .feature-card {
@@ -677,6 +687,12 @@ p { margin: 0; }
   box-shadow: var(--shadow-lift);
   border-color: var(--gold);
 }
+.combo-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  line-height: 1;
+}
 .combo-title { font-size: 1.3rem; font-style: italic; margin-bottom: 10px; }
 .combo-desc { color: var(--muted-text); font-size: 0.92rem; margin-bottom: 18px; }
 .combo-price {
@@ -715,6 +731,14 @@ p { margin: 0; }
 }
 .drink-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lift); }
 
+/* Specialty drink highlight */
+.drink-card--specialty {
+  background: linear-gradient(160deg, var(--rose-light) 0%, var(--surface) 100%);
+  border: 1.5px solid var(--rose);
+  box-shadow: 0 8px 28px rgba(232, 166, 184, 0.3);
+}
+.drink-card--specialty .drink-icon { color: var(--rose-dark); }
+
 .drink-icon {
   width: 56px;
   height: 56px;
@@ -731,38 +755,103 @@ p { margin: 0; }
 }
 .drink-card .card-desc { margin: 12px 0 16px; }
 
-/* ------------------------- 10. CTA ------------------------- */
-.cta-section {
+/* ------------------------- 10. Contact Section ------------------------- */
+.contact-section {
   background: linear-gradient(160deg, var(--brown), #402C25);
-  padding: 100px 24px;
+  padding: 100px 24px 80px;
+}
+.contact-inner {
+  max-width: 860px;
+  margin: 0 auto;
   text-align: center;
 }
-.cta-inner { max-width: 560px; margin: 0 auto; }
-.cta-title {
+.contact-cta { margin-bottom: 64px; }
+.contact-cta .cta-title {
   color: var(--surface);
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-style: italic;
   margin-bottom: 16px;
 }
-.cta-text {
+.contact-cta .cta-text {
   color: var(--rose-light);
   margin-bottom: 34px;
   font-size: 1.02rem;
 }
-.cta-section .btn-ghost {
+.contact-section .btn-ghost {
   color: var(--surface);
   border-color: var(--rose-light);
 }
-.cta-section .btn-ghost:hover {
+.contact-section .btn-ghost:hover {
   background: var(--rose-light);
   color: var(--brown);
 }
-.cta-section .btn-primary {
+.contact-section .btn-primary {
   background: var(--gold);
   color: var(--brown);
 }
-.cta-section .btn-primary:hover { background: var(--gold-light); }
-.cta-section .hero-actions { justify-content: center; }
+.contact-section .btn-primary:hover { background: var(--gold-light); }
+.contact-section .hero-actions { justify-content: center; }
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 0;
+}
+.contact-info-card {
+  background: rgba(255,255,255, 0.06);
+  border: 1px solid rgba(255,255,255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.contact-info-card:hover {
+  background: rgba(255,255,255, 0.10);
+  transform: translateY(-4px);
+}
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: var(--gold);
+}
+.contact-info-icon svg { width: 22px; height: 22px; }
+.contact-info-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.contact-info-value {
+  color: var(--surface);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact-info-note {
+  color: var(--rose-light);
+  font-size: 0.85rem;
+}
+.contact-info-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--gold);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+.contact-info-link:hover { color: var(--surface); }
 
 /* ------------------------- 11. Footer ------------------------- */
 .site-footer {
@@ -871,6 +960,8 @@ p { margin: 0; }
   .feature-body { padding: 36px 32px; }
 
   .footer-inner { grid-template-columns: 1fr 1fr; }
+
+  .contact-info-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile nav */
@@ -930,5 +1021,8 @@ p { margin: 0; }
 
   .hero-inner { padding: 32px 20px 64px; }
   .btn { width: 100%; }
-  .hero-actions, .cta-inner .hero-actions { flex-direction: column; }
+  .hero-actions, .contact-section .hero-actions { flex-direction: column; }
+
+  .contact-info-grid { grid-template-columns: 1fr; }
+
 }
