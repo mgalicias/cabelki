@@ -49,6 +49,9 @@
       <nav class="primary-nav" id="primaryNav" aria-label="Navegación principal">
         <ul>
           <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <!-- SEASON NAV (comentar al terminar la temporada) -->
+          <li><a href="#temporada" class="nav-link nav-link--season">&#10022; Temporada</a></li>
+          <!-- /SEASON NAV -->
           <li><a href="#signature" class="nav-link">Signature</a></li>
           <li><a href="#dulces" class="nav-link">Dulces</a></li>
           <li><a href="#saladas" class="nav-link">Saladas</a></li>
@@ -104,6 +107,68 @@
     </section>
 
     <!-- =========================================================
+         CREPA DE TEMPORADA — limited-time seasonal crêpe
+         ► FIN DE TEMPORADA — para quitarla del sitio:
+           1) Selecciona todas las líneas entre "SEASON START" y "SEASON END"
+              y presiona Ctrl+/  (Cmd+/ en Mac) para comentarlas.
+           2) Haz lo mismo con la línea del menú entre "SEASON NAV" y "/SEASON NAV".
+           Para volver a mostrarla, presiona Ctrl+/ otra vez sobre esas líneas.
+           Para la siguiente temporada solo edita nombre, descripción,
+           ingredientes, precio y la foto (assets/crepes/crepa-de-temporada.jpg).
+    ========================================================== -->
+    <!-- SEASON START -->
+    <section class="season-section" id="temporada" aria-labelledby="season-heading">
+      <span class="season-spark season-spark--1" aria-hidden="true">&#10022;</span>
+      <span class="season-spark season-spark--2" aria-hidden="true">&#10022;</span>
+      <span class="season-spark season-spark--3" aria-hidden="true">&#10023;</span>
+      <span class="season-spark season-spark--4" aria-hidden="true">&#10023;</span>
+
+      <div class="section-inner">
+        <header class="section-head reveal">
+          <p class="season-eyebrow"><span class="season-dot" aria-hidden="true"></span> Edición limitada</p>
+          <h2 class="section-title" id="season-heading">Crepa de Temporada</h2>
+          <span class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 120 16" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="8" x2="46" y2="8" stroke="currentColor" stroke-width="1" />
+              <path d="M60 1 L67 8 L60 15 L53 8 Z" fill="currentColor" />
+              <line x1="74" y1="8" x2="120" y2="8" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </span>
+        </header>
+
+        <article class="season-card reveal">
+          <div class="season-image placeholder-signature">
+            <img src="assets/crepes/crepa-de-temporada.jpg"
+              alt="Crepa de temporada: Pumpkin Spice Dream con calabaza especiada, nuez caramelizada y dulce de leche"
+              loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="season-ribbon">Solo de temporada</span>
+          </div>
+
+          <div class="season-body">
+            <p class="season-tag">&#10024; Disponible por tiempo limitado</p>
+            <h3 class="season-title">Pumpkin Spice Dream</h3>
+            <p class="season-desc">Nuestra crepa de la temporada: calabaza especiada con un toque de canela, cremosa y
+              con el crujido de la nuez caramelizada. Cuando se acabe la temporada, se va&hellip;</p>
+
+            <ul class="season-ingredients" aria-label="Ingredientes">
+              <li>Calabaza especiada</li>
+              <li>Queso crema</li>
+              <li>Canela</li>
+              <li>Nuez caramelizada</li>
+              <li>Dulce de leche</li>
+            </ul>
+
+            <div class="season-footer">
+              <span class="season-price">$159</span>
+              <span class="season-note">Hasta agotar existencias</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- SEASON END -->
+
+    <!-- =========================================================
          SIGNATURE CRÊPES
     ========================================================== -->
     <section class="menu-section" id="signature">
@@ -131,7 +196,7 @@
             <div class="card-body">
               <h3 class="card-title">Red Velvet Berry</h3>
               <p class="card-desc">Frutos rojos, queso crema, azúcar glass y lechera.</p>
-              <p class="card-price">$134 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$114</p>
             </div>
           </article>
 
@@ -145,7 +210,7 @@
             <div class="card-body">
               <h3 class="card-title">Apple Pie Supreme</h3>
               <p class="card-desc">Manzana caramelizada con canela, queso crema, nuez y dulce de leche.</p>
-              <p class="card-price">$134 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$114</p>
             </div>
           </article>
 
@@ -170,7 +235,7 @@
           </span>
         </header>
 
-        <div class="card-grid card-grid--3">
+        <div class="card-grid card-grid--2">
           <article class="product-card reveal">
             <div class="card-image placeholder-sweet">
               <img src="assets/crepes/choco-berry-bliss.jpeg"
@@ -179,9 +244,9 @@
               <span class="card-badge">&#9733; Nuevo</span>
             </div>
             <div class="card-body">
-              <h3 class="card-title">Choco Berry Bliss</h3>
-              <p class="card-desc">Fresas frescas, Nutella, chocolate líquido y granillo de chocolate.</p>
-              <p class="card-price">$123 <span class="price-currency">MXN</span></p>
+              <h3 class="card-title">Choco Berry Blizz</h3>
+              <p class="card-desc">Fresas frescas, Nutella, queso crema, chocolate líquido y granillo de chocolate.</p>
+              <p class="card-price">$93</p>
             </div>
           </article>
 
@@ -193,7 +258,7 @@
             <div class="card-body">
               <h3 class="card-title">Banana Bliss</h3>
               <p class="card-desc">Plátano, nutella, coco rallado y chocolate líquido.</p>
-              <p class="card-price">$123 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$93</p>
             </div>
           </article>
 
@@ -206,7 +271,7 @@
             <div class="card-body">
               <h3 class="card-title">Strawberry Cream</h3>
               <p class="card-desc">Fresas frescas, queso crema, azúcar glass y nuez.</p>
-              <p class="card-price">$123 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$93</p>
             </div>
           </article>
 
@@ -218,7 +283,7 @@
             <div class="card-body">
               <h3 class="card-title">Nutty Golden</h3>
               <p class="card-desc">Plátano, dulce de leche y nuez.</p>
-              <p class="card-price">$123 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$93</p>
             </div>
           </article>
 
@@ -254,7 +319,7 @@
             <div class="card-body">
               <h3 class="card-title">Pepperoni Melt</h3>
               <p class="card-desc">Pepperoni, queso mozzarella y salsa italiana.</p>
-              <p class="card-price">$129 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$99</p>
             </div>
           </article>
 
@@ -266,7 +331,7 @@
             <div class="card-body">
               <h3 class="card-title">Aloha Delight</h3>
               <p class="card-desc">Jamón, piña, queso mozzarella y salsa italiana.</p>
-              <p class="card-price">$129 <span class="price-currency">MXN</span></p>
+              <p class="card-price">$99</p>
             </div>
           </article>
 
@@ -281,7 +346,7 @@
       <div class="section-inner">
         <header class="section-head reveal">
           <p class="section-eyebrow">Personaliza tu crêpe</p>
-          <h2 class="section-title">Crepas al gusto</h2>
+          <h2 class="section-title">Crêpe al Gusto</h2>
           <span class="ornament" aria-hidden="true">
             <svg viewBox="0 0 120 16" xmlns="http://www.w3.org/2000/svg">
               <line x1="0" y1="8" x2="46" y2="8" stroke="currentColor" stroke-width="1" />
@@ -320,17 +385,27 @@
               <span class="feature-price-badge">$113</span>
             </div>
 
-            <p class="feature-select-label">Selecciona:</p>
-            <p class="feature-select-sub">1 base + 1 topping</p>
+            <p class="feature-select-label">Selecciona una base:</p>
+            <ul class="toppings-grid reveal">
+              <li class="topping-row"><span>Queso Crema</span></li>
+              <li class="topping-row"><span>Dulce de Leche</span></li>
+              <li class="topping-row"><span>Mermelada Cabelki</span></li>
+              <li class="topping-row"><span>Nutella</span></li>
+              <li class="topping-row"><span>Lechera</span></li>
 
-            <p class="feature-option-line"><strong>Queso Crema, Dulce de Leche, Mermelada de la Casa</strong> o
-              <strong>Nutella</strong>
-            </p>
+            </ul>
+            <p class="feature-select-label">Selecciona un topping:</p>
+            <ul class="toppings-grid reveal">
+              <li class="topping-row"><span>Nuez</span></li>
+              <li class="topping-row"><span>Coco rallado</span></li>
+              <li class="topping-row"><span>Granillo Turín</span></li>
+              <li class="topping-row"><span>Galleta Oreo</span></li>
+              <li class="topping-row"><span>Chocolate líquido</span></li>
+
+            </ul>
             <span class="feature-plus" aria-hidden="true">+</span>
-            <p class="feature-option-line"><strong>Nuez, Coco rallado, Granillo Turín</strong> o <strong>Galleta
-                Oreo</strong></p>
 
-            <p class="feature-note">Agregar toppings extras desde $10.</p>
+            <p class="feature-note">Cualquier topping que no este en la lista de seleccion se puede agregar desde $10.</p>
           </div>
         </div>
       </div>
@@ -342,7 +417,7 @@
     <section class="menu-section menu-section--alt" id="toppings-extras">
       <div class="section-inner">
         <header class="section-head reveal">
-          <h2 class="section-title">Toppings</h2>
+          <h3 class="section-title">Toppings</h3>
           <span class="ornament" aria-hidden="true">
             <svg viewBox="0 0 120 16" xmlns="http://www.w3.org/2000/svg">
               <line x1="0" y1="8" x2="46" y2="8" stroke="currentColor" stroke-width="1" />
@@ -361,7 +436,7 @@
           <li class="topping-row"><span>Dulce de leche</span><span class="topping-price">$15</span></li>
           <li class="topping-row"><span>Lechera</span><span class="topping-price">$10</span></li>
           <li class="topping-row"><span>Chocolate líquido</span><span class="topping-price">$10</span></li>
-          <li class="topping-row"><span>Mermelada de la casa</span><span class="topping-price">$15</span></li>
+          <li class="topping-row"><span>Mermelada Cabelki</span><span class="topping-price">$15</span></li>
           <li class="topping-row"><span>Helado</span><span class="topping-price">$25</span></li>
         </ul>
       </div>
@@ -410,9 +485,9 @@
 
           <div class="feature-body">
             <div class="feature-header">
-              <h3 class="feature-title">Fresas con Crema <span class="drink-size">(500ml)</span></h3>
+              <h3 class="feature-title">Berry Bloom<span class="drink-size">(500ml)</span></h3>
 
-              <span class="feature-price-badge">$125</span>
+              <span class="feature-price-badge">$115</span>
             </div>
 
             <p class="card-desc">Capas de fresas frescas, crema de la casa y 4 topings a elegir!
@@ -495,7 +570,6 @@
         </div>
       </div>
     </section>
-    -->
 
     <!-- =========================================================
          BEBIDAS CALIENTES
