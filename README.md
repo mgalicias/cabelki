@@ -119,7 +119,15 @@ No necesitas tocar `styles.css` ni `script.js` — cada crêpe es un bloque de H
 
 5. Guarda el archivo y ábrelo en el navegador — no hace falta recargar nada más, el nuevo sabor aparece con el mismo estilo (tarjeta, sombra, animación al hacer scroll) que el resto del menú.
 
-> Tip: si agregas 4 o más sabores en la sección "Dulces" (que usa `card-grid--3`, tres columnas), el diseño se ajusta solo — no necesitas cambiar el grid.
+> Tip: la sección "Dulces" usa `card-grid--2` (cuadrícula de 2 columnas, hoy 2×2 con 4 sabores). Si agregas más sabores, se acomodan en filas de 2 — para tener siempre filas completas agrega de 2 en 2.
+
+## 5b. Crepa de Temporada (sección temporal)
+
+Sección destacada al inicio del menú (`id="temporada"`) con foto, descripción, ingredientes, precio y la etiqueta "Solo de temporada".
+
+- **Foto:** guarda la imagen como `assets/crepes/crepa-de-temporada.jpg` (mientras no exista se ve un placeholder).
+- **Cambiar de temporada:** edita en `index.html` el nombre (`season-title`), la descripción (`season-desc`), los ingredientes (`season-ingredients`) y el precio (`season-price`).
+- **Quitarla cuando termine la temporada:** en `index.html` selecciona todas las líneas entre `SEASON START` y `SEASON END` y presiona **Ctrl+/** (Cmd+/ en Mac). Haz lo mismo con la línea entre `SEASON NAV` y `/SEASON NAV` en el menú. Para volver a mostrarla, presiona Ctrl+/ otra vez.
 
 ## 6. Opciones de tipografía
 
