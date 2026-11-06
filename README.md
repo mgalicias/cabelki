@@ -1,6 +1,6 @@
 # CABELKI Crêpes — Sitio web
 
-Sitio estático (HTML + CSS + JS puro, sin frameworks) para la crepería CABELKI.
+Sitio estático (HTML + CSS puro, sin frameworks ni JavaScript) para la crepería CABELKI.
 
 ## 1. Estructura del proyecto
 
@@ -8,7 +8,6 @@ Sitio estático (HTML + CSS + JS puro, sin frameworks) para la crepería CABELKI
 cabelki-crepes/
 ├── index.html
 ├── styles.css
-├── script.js
 ├── README.md
 └── assets/
     ├── logo/
@@ -82,51 +81,42 @@ Luego abre `http://localhost:8000` en tu navegador.
 
 ## 5. Cómo agregar un nuevo sabor de crêpe
 
-No necesitas tocar `styles.css` ni `script.js` — cada crêpe es un bloque de HTML independiente (una "tarjeta") dentro de `index.html`. Para agregar uno nuevo:
+No necesitas tocar `styles.css` — cada crêpe es un bloque de HTML independiente (una "tarjeta") dentro de `index.html`. Para agregar uno nuevo:
 
 1. **Abre `index.html`** y localiza la sección donde quieres agregar el sabor:
    - `id="signature"` → Crêpes Signature
    - `id="dulces"` → Crêpes Dulces
    - `id="saladas"` → Crêpes Saladas
 
-2. **Copia una tarjeta existente completa**, desde `<article class="product-card reveal">` hasta su `</article>` de cierre. Por ejemplo, esta es la de "Banana Bliss":
+2. **Copia una tarjeta existente completa**, desde `<article class="plate">` hasta su `</article>` de cierre. Por ejemplo, esta es la de "Banana Bliss":
 
    ```html
-   <article class="product-card reveal">
-     <div class="card-image placeholder-sweet">
-       <img src="assets/crepes/banana-bliss.jpg" alt="Crêpe Banana Bliss con plátano, nutella y coco rallado" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
-     </div>
-     <div class="card-body">
-       <h3 class="card-title">Banana Bliss</h3>
-       <p class="card-desc">Plátano, nutella, coco rallado y chocolate líquido.</p>
-       <p class="card-price">$93</p>
-     </div>
-   </article>
+   <article class="plate"><div class="ph"><img src="assets/crepes/banana-bliss.jpeg" alt="Crêpe Banana Bliss con plátano, nutella y coco rallado" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')"></div>
+     <div class="pbody"><h3>Banana Bliss</h3><p class="d">Plátano, nutella, coco rallado y chocolate líquido.</p><p class="price num">$123<small>MXN</small></p></div></article>
    ```
 
-3. **Pégala justo debajo**, dentro del mismo `<div class="card-grid ...">`, y cambia:
-   - `src="assets/crepes/banana-bliss.jpg"` → el nombre de archivo de tu nueva foto (guárdala en `assets/crepes/` con ese mismo nombre; mientras no exista, se ve un placeholder elegante automáticamente).
+3. **Pégala justo debajo**, dentro del mismo `<div class="grid ...">`, y cambia:
+   - `src="assets/crepes/banana-bliss.jpeg"` → el nombre de archivo de tu nueva foto (guárdala en `assets/crepes/` con ese mismo nombre y extensión exacta; mientras no exista, se ve un fondo elegante automáticamente).
    - El `alt="..."` → una descripción corta de la foto.
-   - `<h3 class="card-title">` → el nombre del sabor.
-   - `<p class="card-desc">` → los ingredientes.
-   - `<p class="card-price">` → el precio.
-   - La clase `placeholder-sweet` del `<div class="card-image ...">` según la sección: usa `placeholder-signature`, `placeholder-sweet` o `placeholder-savory`.
+   - `<h3>` → el nombre del sabor.
+   - `<p class="d">` → los ingredientes.
+   - `<p class="price num">` → el precio.
 
-4. Si quieres que destaque con una etiqueta como "★ Favoritas", agrega dentro de `card-image`:
+4. Si quieres que destaque con una etiqueta como "★ Favoritas", agrega dentro de `<div class="ph">`:
    ```html
-   <span class="card-badge">&#9733; Favoritas</span>
+   <span class="tag">★ Favoritas</span>
    ```
 
-5. Guarda el archivo y ábrelo en el navegador — no hace falta recargar nada más, el nuevo sabor aparece con el mismo estilo (tarjeta, sombra, animación al hacer scroll) que el resto del menú.
+5. Guarda el archivo y ábrelo en el navegador — no hace falta recargar nada más, el nuevo sabor aparece con el mismo estilo (tarjeta con marco y efecto al pasar el cursor) que el resto del menú.
 
-> Tip: la sección "Dulces" usa `card-grid--2` (cuadrícula de 2 columnas, hoy 2×2 con 4 sabores). Si agregas más sabores, se acomodan en filas de 2 — para tener siempre filas completas agrega de 2 en 2.
+> Tip: la sección "Dulces" usa `grid g4` (hasta 4 columnas según el ancho de pantalla) y Signature/Saladas usan `grid g2` (2 columnas).
 
 ## 5b. Crepa de Temporada (sección temporal)
 
 Sección destacada al inicio del menú (`id="temporada"`) con foto, descripción, ingredientes, precio y la etiqueta "Solo de temporada".
 
-- **Foto:** guarda la imagen como `assets/crepes/crepa-de-temporada.jpg` (mientras no exista se ve un placeholder).
-- **Cambiar de temporada:** edita en `index.html` el nombre (`season-title`), la descripción (`season-desc`), los ingredientes (`season-ingredients`) y el precio (`season-price`).
+- **Foto:** guarda la imagen como `assets/crepes/crepa-de-temporada.png` (mientras no exista se ve un fondo de color).
+- **Cambiar de temporada:** edita en `index.html` el nombre (el `<h3>`), la descripción (`class="desc"`), los ingredientes (`class="chips"`) y el precio (`class="price"`).
 - **Quitarla cuando termine la temporada:** en `index.html` selecciona todas las líneas entre `SEASON START` y `SEASON END` y presiona **Ctrl+/** (Cmd+/ en Mac). Haz lo mismo con la línea entre `SEASON NAV` y `/SEASON NAV` en el menú. Para volver a mostrarla, presiona Ctrl+/ otra vez.
 
 ## 6. Opciones de tipografía
@@ -157,9 +147,10 @@ Para cambiar de opción:
 
 ## 7. Notas de diseño
 
-- **Paleta de marca CABELKI**: Rosa CABELKI `#E8A6B8`, Rosa pastel `#F6D6DE`, Crema `#FFF5E8`, Chocolate `#5A3528`, Café medio `#8B5E4A`, Champagne `#D9B98C` y Beige rosado `#E7C9C0`. Todos los colores viven como variables en `:root` al inicio de `styles.css` (por ejemplo `--rose`, `--gold`, `--brown`) — cambiar un valor ahí actualiza todo el sitio.
-- Los precios se muestran en pesos mexicanos (sin necesidad de la etiqueta "MXN" junto al número).
-- La sección **"Crêpe al Gusto"** (después de Crêpes Saladas) es una tarjeta destacada de "arma tu crêpe": 1 base a elegir entre 4 + 1 topping a elegir entre 4, por $83. No es interactiva (no hay que hacer clic para seleccionar) — es informativa, igual que el resto del menú.
-- La sección **"Fresas con Crema"** (`id="fresas-con-crema"`, entre "Crêpe al Gusto" y "Toppings Extras") reutiliza la misma tarjeta destacada (`feature-card`) que "Crêpe al Gusto" para mostrar el vaso de 500ml por $115, y debajo repite la misma lista de toppings extras (`toppings-grid`) con sus precios individuales, ya que este producto también admite toppings extra.
-- El sitio respeta `prefers-reduced-motion`, tiene foco de teclado visible y navegación accesible por teclado.
-- El botón **"Ordenar ahora"** (sección Contacto) abre WhatsApp directo al número de CABELKI con un mensaje de pedido ya escrito. El botón **"Ver Facebook"** e **"Ver Instagram"** llevan a los perfiles oficiales del negocio.
+- **Diseño "champagne & blush noir"**: fondo chocolate con líneas champagne `#D9B98C` y acentos rosa `#E8A6B8`; en dispositivos con modo claro se ve en crema (`#FFF5E8`). Todos los colores viven como variables en `:root` al inicio de `styles.css` (por ejemplo `--bg`, `--gold`, `--rose`) — cambiar un valor ahí actualiza todo el sitio.
+- Los precios se muestran en pesos mexicanos con una pequeña etiqueta "MXN" junto al número.
+- La sección **"Crêpe al Gusto"** (después de Crêpes Saladas) es una tarjeta destacada de "arma tu crêpe": 1 base a elegir entre 5 + 1 topping a elegir entre 5, por $113. No es interactiva (no hay que hacer clic para seleccionar) — es informativa, igual que el resto del menú.
+- La sección **"Fresas con Crema"** (`id="fresas"`, después de "Extra Toppings") reutiliza la misma tarjeta destacada (`feature`) que "Crêpe al Gusto" para mostrar el vaso de 500ml por $115, y debajo repite la lista de toppings (`menu-list`) con sus precios individuales, ya que este producto también admite toppings extra.
+- Las secciones **Combos** y **Bebidas** están ocultas (comentadas) en `index.html`; para mostrarlas sigue las instrucciones del comentario `COMBOS` / `BEBIDAS` y descomenta su enlace en el menú.
+- El sitio respeta `prefers-reduced-motion`, tiene foco de teclado visible, enlace "Saltar al contenido" y navegación accesible por teclado.
+- El botón **"Ordenar ahora"** (sección Contacto, aparece una sola vez) abre WhatsApp directo al número de CABELKI con un mensaje de pedido ya escrito. El botón **"Ver Facebook"** e **"Ver Instagram"** llevan a los perfiles oficiales del negocio.
