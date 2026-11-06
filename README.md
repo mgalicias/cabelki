@@ -1,6 +1,6 @@
 # CABELKI Crêpes — Sitio web
 
-Sitio estático (HTML + CSS puro, sin frameworks ni JavaScript) para la crepería CABELKI.
+Sitio estático (HTML + CSS + un poco de JS puro, sin frameworks) para la crepería CABELKI.
 
 ## 1. Estructura del proyecto
 
@@ -8,6 +8,7 @@ Sitio estático (HTML + CSS puro, sin frameworks ni JavaScript) para la creperí
 cabelki-crepes/
 ├── index.html
 ├── styles.css
+├── script.js          ← solo el menú hamburguesa del celular
 ├── README.md
 └── assets/
     ├── logo/

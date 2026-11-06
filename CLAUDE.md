@@ -4,12 +4,13 @@ This file guides Claude Code (claude.ai/code) when working in this repository.
 
 ## What this is
 
-A one-page static marketing/menu site for **CABELKI Crêpes**, a crêpe shop in Mexico. It is plain HTML and CSS with no frameworks, no JavaScript, no build step, no package manager and no tests. The remote is `git@github.com:mgalicias/cabelki.git`, and the site is meant to be served as-is (GitHub Pages from `main` / root, or Netlify/Vercel).
+A one-page static marketing/menu site for **CABELKI Crêpes**, a crêpe shop in Mexico. It is plain HTML, CSS and one tiny vanilla-JS file with no frameworks, no build step, no package manager and no tests. The remote is `git@github.com:mgalicias/cabelki.git`, and the site is meant to be served as-is (GitHub Pages from `main` / root, or Netlify/Vercel).
 
-The look is the "champagne & blush noir" redesign (dark chocolate, champagne hairlines, rose accents; light cream when the visitor prefers a light scheme). An earlier design (`site-header`, `product-card`, `feature-card`, `script.js`) was removed; it lives in git history (e.g. `adae240`).
+The look is the "champagne & blush noir" redesign (dark chocolate, champagne hairlines, rose accents; light cream when the visitor prefers a light scheme). An earlier design (`site-header`, `product-card`, `feature-card`, scroll-reveal JS) was removed; it lives in git history (e.g. `adae240`).
 
 - `index.html`: all content. Every menu item, price and section lives here.
 - `styles.css`: all styling, one file, short comment per block (tokens on `:root`, header, hero, sections, plates, feature, lists, combos, drinks, contact).
+- `script.js`: only the mobile hamburger menu (toggle, closes on link tap / Escape / outside tap). `<html>` gets class `js` from an inline script in `<head>`; the mobile dropdown styles are scoped to `.js`, so without JS the nav stays a scrollable row.
 - `assets/crepes/`: product photos. `assets/drinks/` and `assets/icons/` are empty placeholders (`.gitkeep`).
 - `README.md`: owner-facing guide **in Spanish** (photo naming, adding a flavor, font swaps, deploy). Keep it in sync when you change structure it describes.
 - `.old/`: git-ignored snapshot of an earlier version. Don't edit it or use it as a reference.
@@ -32,9 +33,9 @@ Opening `index.html` directly also works.
 
 `#inicio` (hero) → `#temporada` (seasonal, removable) → `#signature` → `#dulces` → `#saladas` → `#gusto` (Crêpe al Gusto) → `#toppings` (Extra Toppings) → `#fresas` (Fresas con Crema + its toppings) → `#combos` (hidden) → `#bebidas` (hidden) → `#contacto` → footer.
 
-The header nav (`header.bar`) links to `#temporada`, `#signature`, `#dulces`, `#saladas`, `#gusto`, `#fresas` and `#contacto`. `#combos` and `#bebidas` are commented out together with their nav links. `#toppings` is not in the nav.
+The header nav (`header.bar > nav#primaryNav`, a hamburger dropdown below 760px) links to `#temporada`, `#signature`, `#dulces`, `#saladas`, `#gusto`, `#fresas` and `#contacto`. `#combos` and `#bebidas` are commented out together with their nav links. `#toppings` is not in the nav.
 
-Sections alternate backgrounds: `section.alt > .wrap` (tinted, full-bleed) and plain `.wrap > section`. Each repeats the same pattern: `div.head` (`p.eyebrow`, `h2`, `div.rule > span`) → content. Copy an existing section's markup instead of inventing a new one. No `.reveal`/scroll JS exists.
+Sections alternate backgrounds: `section.alt > .wrap` (tinted, full-bleed) and plain `.wrap > section`. Each repeats the same pattern: `div.head` (`p.eyebrow`, `h2`, `div.rule > span`) → content. Copy an existing section's markup instead of inventing a new one. There is no scroll-reveal JS.
 
 ## Component patterns
 
