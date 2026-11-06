@@ -139,3 +139,9 @@
   - .btn-order:hover { ... }
   ```
 
+
+## Rediseño de lujo "Champagne & blush noir"
+
+- Nuevo `index.html` y `styles.css`: fondo chocolate, detalles champagne, acentos rosa, Cormorant Garamond + Lato.
+- Se conservan todos los productos, descripciones, precios, fotos y enlaces (WhatsApp, Instagram, Facebook, mapa).
+- Se elimina `script.js`: el nuevo diseño no necesita JavaScript (navegación con anclas y animaciones en CSS).
