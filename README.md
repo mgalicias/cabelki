@@ -112,14 +112,6 @@ No necesitas tocar `styles.css` — cada crêpe es un bloque de HTML independien
 
 > Tip: la sección "Dulces" usa `grid g4` (hasta 4 columnas según el ancho de pantalla) y Signature/Saladas usan `grid g2` (2 columnas).
 
-## 5b. Crepa de Temporada (sección temporal)
-
-Sección destacada al inicio del menú (`id="temporada"`) con foto, descripción, ingredientes, precio y la etiqueta "Solo de temporada".
-
-- **Foto:** guarda la imagen como `assets/crepes/crepa-de-temporada.png` (mientras no exista se ve un fondo de color).
-- **Cambiar de temporada:** edita en `index.html` el nombre (el `<h3>`), la descripción (`class="desc"`), los ingredientes (`class="chips"`) y el precio (`class="price"`).
-- **Quitarla cuando termine la temporada:** en `index.html` selecciona todas las líneas entre `SEASON START` y `SEASON END` y presiona **Ctrl+/** (Cmd+/ en Mac). Haz lo mismo con la línea entre `SEASON NAV` y `/SEASON NAV` en el menú. Para volver a mostrarla, presiona Ctrl+/ otra vez.
-
 ## 6. Opciones de tipografía
 
 El sitio usa actualmente **Cormorant Garamond** (títulos) + **Lato** (texto) — un estilo más delicado y romántico. Si quieres probar otro estilo, aquí tienes alternativas — todas gratuitas en Google Fonts y afines a la estética boutique del sitio:

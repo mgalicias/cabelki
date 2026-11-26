@@ -6,6 +6,10 @@
 
 ---
 
+## Fin de la temporada de Calaverita de mis Amores
+
+Se retiraron la sección, sus enlaces y la fotografía `crepa-de-temporada.png` del menú y del concepto de lujo. El carrusel conserva los dos avisos vigentes: Berry Bloom y horario de pedidos.
+
 ## [v1.1.0] — 2026-09-01
 
 ### 🔴 Critical Bug Fixes
