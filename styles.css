@@ -192,17 +192,10 @@ footer .brand { display: block; margin-bottom: 8px; }
 .head h3 { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.05; margin-top: 10px; }
 .head.subhead { margin-top: clamp(40px, 6vw, 64px); }
 
-/* Chips: base/topping choices and season ingredients */
+/* Chips: base/topping choices */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li { padding: 5px 14px; border: 1px solid var(--line); font-size: 0.85rem; letter-spacing: 0.04em; color: var(--fg); }
 .feature .desc { color: var(--muted); }
-
-/* Seasonal crepe */
-.season { background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%), var(--bg-2); }
-.season .head .eyebrow { color: var(--gold); }
-.season-card .fi { position: relative; }
-.nav a.nav-season { color: var(--rose); }
-.nav a.nav-season:hover { color: var(--gold); }
 
 /* Cutout photo (transparent PNG, e.g. Fresas con Crema): fitted whole over a themed backdrop */
 .feature .fi--cutout {

@@ -31,18 +31,17 @@ Opening `index.html` directly also works.
 
 ## Page structure (section order in `index.html`)
 
-`#inicio` (hero) → `#temporada` (seasonal, removable) → `#signature` → `#dulces` → `#saladas` → `#gusto` (Crêpe al Gusto) → `#toppings` (Extra Toppings) → `#fresas` (Fresas con Crema + its toppings) → `#combos` (hidden) → `#bebidas` (hidden) → `#contacto` → footer.
+`#inicio` (hero) → `#signature` → `#dulces` → `#saladas` → `#gusto` (Crêpe al Gusto) → `#toppings` (Extra Toppings) → `#fresas` (Fresas con Crema + its toppings) → `#combos` (hidden) → `#bebidas` (hidden) → `#contacto` → footer.
 
-The header nav (`header.bar > nav#primaryNav`, a hamburger dropdown below 760px) links to `#temporada`, `#signature`, `#dulces`, `#saladas`, `#gusto`, `#fresas` and `#contacto`. `#combos` and `#bebidas` are commented out together with their nav links. `#toppings` is not in the nav.
+The header nav (`header.bar > nav#primaryNav`, a hamburger dropdown below 760px) links to `#signature`, `#dulces`, `#saladas`, `#gusto`, `#fresas` and `#contacto`. `#combos` and `#bebidas` are commented out together with their nav links. `#toppings` is not in the nav.
 
 Sections alternate backgrounds: `section.alt > .wrap` (tinted, full-bleed) and plain `.wrap > section`. Each repeats the same pattern: `div.head` (`p.eyebrow`, `h2`, `div.rule > span`) → content. Copy an existing section's markup instead of inventing a new one. There is no scroll-reveal JS.
 
 ## Component patterns
 
 - **Plate** (Signature/Dulces/Saladas): `article.plate` > `.ph` > `img` + optional `span.tag`, then `.pbody` with `h3`, `p.d` and `p.price.num` (`$NN<small>MXN</small>`). Grids are `.grid.g2` or `.grid.g4`.
-- **Feature** (Crêpe al Gusto, Fresas con Crema, seasonal crêpe): `.feature` (`.flip` swaps the image side) with `.fi` (image) and `.fb` (body). Choices are `ul.chips` inside `.pick` (labels `.lab`, separator `.plus`). It is informational only: nothing is selectable.
+- **Feature** (Crêpe al Gusto, Fresas con Crema): `.feature` (`.flip` swaps the image side) with `.fi` (image) and `.fb` (body). Choices are `ul.chips` inside `.pick` (labels `.lab`, separator `.plus`). It is informational only: nothing is selectable.
 - **Leader-dot list**: `ul.menu-list` > `li` > `<span>name</span><span class="pr">$NN</span>`; add `.cols` for two columns. Extra Toppings (`#toppings`) and the list under Fresas con Crema are **separate hard-coded lists**, so a price change usually has to be made in both.
-- **Seasonal crêpe** (`#temporada`): `section.alt.season` with an `article.feature.season-card`. It is wrapped in `<!-- SEASON START -->` / `<!-- SEASON END -->` and its nav link in `<!-- SEASON NAV -->` / `<!-- /SEASON NAV -->`. To end the season, comment out both blocks (select the lines, Ctrl+/). Never nest a real HTML comment inside those blocks. The photo is `assets/crepes/crepa-de-temporada.png`.
 - **Hidden sections** (Combos, Bebidas): kept as one big HTML comment between `COMBOS START`/`COMBOS END` (same for BEBIDAS). The markup inside uses `.combo` cards and `.house` + `.menu-list` for drinks. Don't put `--` or nested comments inside.
 
 ### Image fallback convention

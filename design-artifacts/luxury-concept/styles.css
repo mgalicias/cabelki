@@ -508,26 +508,11 @@ button { font: inherit; }
   font-size: 10px;
 }
 
-.season { min-height: 900px; display: grid; grid-template-columns: 55% 45%; background: var(--ink); color: var(--paper); }
-.season-image { min-height: 900px; overflow: hidden; position: relative; }
-.season-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 66%, rgba(27, 18, 16, .82)); }
-.season-image img { height: 100%; object-fit: cover; filter: saturate(.76) contrast(1.05) brightness(.78); }
-
-.season-copy { padding: 120px clamp(50px, 6vw, 100px) 100px; display: flex; flex-direction: column; justify-content: center; }
-.season-copy .section-index { color: rgba(255, 250, 244, .4); }
 .overline--light { color: var(--gold-light); }
-.season-copy .overline { margin-top: 90px; }
-.season-copy h2 { margin: 22px 0 30px; font-family: var(--display); font-size: clamp(64px, 6vw, 96px); font-weight: 500; letter-spacing: -.045em; line-height: .76; }
-.season-copy h2 em { color: var(--rose-soft); font-size: .72em; font-weight: 500; }
-.season-description { max-width: 500px; margin: 0; color: rgba(255, 250, 244, .58); font-size: 12px; }
 
 .ingredient-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 34px 0 0; padding: 0; list-style: none; }
 .ingredient-list li { padding: 8px 12px; border: 1px solid rgba(234, 215, 173, .22); color: var(--gold-light); font-size: 7px; letter-spacing: .12em; text-transform: uppercase; }
 
-.season-order { margin-top: 68px; padding-top: 26px; border-top: 1px solid var(--line-light); display: flex; align-items: center; justify-content: space-between; }
-.season-order > span { display: flex; flex-direction: column; }
-.season-order small { color: rgba(255, 250, 244, .44); font-size: 7px; letter-spacing: .18em; text-transform: uppercase; }
-.season-order strong { color: var(--gold-light); font-family: var(--display); font-size: 38px; font-weight: 500; }
 .round-action { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 50%; background: var(--rose); color: var(--ink); font-size: 20px; transition: transform .25s ease; }
 .round-action:hover { transform: rotate(14deg); }
 
@@ -693,16 +678,8 @@ button { font: inherit; }
 .berry-copy .feature-note { margin: 8px 0 12px; }
 .berry-toppings { grid-template-columns: 1fr; }
 
-.season { min-height: 690px; }
-.season-image { min-height: 690px; }
-.season-image img { position: absolute; inset: 0; }
-.season-copy { padding-top: 72px; padding-bottom: 72px; }
-.season-copy .section-index { font-size: 11px; color: var(--gold-light); }
-.season-copy .overline { margin-top: 44px; }
-.season-copy h2 { font-size: clamp(56px, 5.3vw, 80px); line-height: .95; }
-.season-description { font-size: 14px; color: var(--ivory); }
 .ingredient-list li { font-size: 11px; letter-spacing: .04em; }
-.season-order small { font-size: 11px; color: var(--ivory); }
+
 .experience { padding: 90px 0; }
 .experience-heading { margin-bottom: 42px; }
 .experience-heading .section-index { font-size: 11px; color: var(--muted); }
@@ -730,8 +707,7 @@ button { font: inherit; }
   .hero-badge { width: 96px; height: 96px; }
   .section-heading { grid-template-columns: 20% 1fr; }
   .section-heading > p { display: none; }
-  .season { grid-template-columns: 50% 50%; }
-  .season-copy { padding-inline: 48px; }
+
   .experience-grid article { padding-inline: 28px; }
 }
 
@@ -775,12 +751,7 @@ button { font: inherit; }
   .product-card--feature { transform: none; }
   .product-image { aspect-ratio: 1; }
   .collection-footer { margin-top: 60px; align-items: flex-start; gap: 24px; flex-direction: column; }
-  .season { grid-template-columns: 1fr; }
-  .season-image { min-height: 560px; }
-  .season-image::after { background: linear-gradient(180deg, transparent 65%, var(--ink)); }
-  .season-copy { padding: 70px 24px 82px; }
-  .season-copy .overline { margin-top: 55px; }
-  .season-copy h2 { font-size: 64px; }
+
   .experience { padding: 96px 0; }
   .experience-heading { grid-template-columns: 1fr; gap: 30px; }
   .experience-heading h2 { font-size: 52px; }
@@ -810,7 +781,7 @@ button { font: inherit; }
   .choice-columns { gap: 16px; }
   .feature-title-row h3 { font-size: 36px; }
   .berry-feature { gap: 32px; }
-  .season-copy { padding-inline: 36px; }
+
 }
 
 @media (max-width: 760px) {
@@ -872,11 +843,7 @@ button { font: inherit; }
   .price-list li { font-size: 14px; }
   .berry-feature { gap: 30px; }
   .berry-feature .feature-photo { height: 390px; }
-  .season-image { min-height: 440px; }
-  .season-copy { padding: 42px 24px 56px; }
-  .season-copy .overline { margin-top: 28px; }
-  .season-copy h2 { font-size: 60px; }
-  .season-order { margin-top: 38px; }
+
   .experience { padding-block: 58px; }
   .experience-heading { margin-bottom: 32px; }
   .experience-heading h2 { font-size: 46px; }

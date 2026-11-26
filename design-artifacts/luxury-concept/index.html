@@ -15,13 +15,7 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <a class="announcement" href="#promociones">
-    <span>Un antojo de temporada</span>
-    <i aria-hidden="true"></i>
-    <span>Calaverita de mis Amores · $134</span>
-    <i aria-hidden="true"></i>
-    <span>Descúbrelo <span aria-hidden="true">→</span></span>
-  </a>
+  <a class="announcement" href="#promociones">Promociones y novedades <span aria-hidden="true">→</span></a>
 
   <header class="site-header" id="siteHeader">
     <div class="nav-shell">
@@ -41,7 +35,6 @@
       <nav class="primary-nav" id="primaryNav" aria-label="Navegación principal">
         <a href="#coleccion">El menú</a>
         <a href="#promociones" class="nav-promotions"><span aria-hidden="true">✦</span> Promociones</a>
-        <a href="#temporada">Temporada</a>
         <a href="#contacto" class="nav-order">Ordenar ahora <span aria-hidden="true">&rarr;</span></a>
       </nav>
     </div>
@@ -60,7 +53,6 @@
 
           <div class="hero-actions">
             <a class="button button--gold" href="#coleccion">Descubrir el menú <span aria-hidden="true">&darr;</span></a>
-            <a class="text-link" href="#temporada">Ver edición limitada <span aria-hidden="true">→</span></a>
           </div>
 
           <div class="hero-notes" aria-label="Características">
@@ -101,17 +93,7 @@
         <!-- Verified highlights; replace or add slides here when a new offer is confirmed. -->
         <div class="promo-carousel" role="region" aria-roledescription="carrusel" aria-label="Promociones y avisos de CABELKI">
           <div class="promo-slides" id="promoSlides">
-            <article class="promo-slide promo-slide--season" id="promo-season" role="group" aria-roledescription="diapositiva" aria-label="1 de 3: Edición de temporada">
-              <div class="promo-copy">
-                <p class="promo-label"><span aria-hidden="true">✦</span> Edición de temporada</p>
-                <h3>Calaverita<br><em>de mis Amores.</em></h3>
-                <p>Calabaza en tacha, queso crema, canela, nuez y dulce de leche. Un antojo que solo llega por temporada.</p>
-                <div class="promo-offer"><strong>$134</strong><span>Hasta agotar existencias</span></div>
-                <a class="button button--gold" href="#temporada">Descubrir esta creación <span aria-hidden="true">→</span></a>
-              </div>
-              <div class="promo-photo"><img src="../../assets/crepes/crepa-de-temporada.png" alt="Calaverita de mis Amores, crepa de temporada" loading="lazy" decoding="async"></div>
-            </article>
-            <article class="promo-slide promo-slide--berry" id="promo-berry" role="group" aria-roledescription="diapositiva" aria-label="2 de 3: Berry Bloom">
+            <article class="promo-slide promo-slide--berry" id="promo-berry" role="group" aria-roledescription="diapositiva" aria-label="1 de 2: Berry Bloom">
               <div class="promo-copy">
                 <p class="promo-label"><span aria-hidden="true">✦</span> Un favorito a tu gusto</p>
                 <h3>Berry Bloom.<br><em>Tu toque especial.</em></h3>
@@ -121,7 +103,7 @@
               </div>
               <div class="promo-photo"><img src="../../assets/crepes/fresas-con-crema.png" alt="Vaso Berry Bloom de fresas con crema" loading="lazy" decoding="async"></div>
             </article>
-            <article class="promo-slide promo-slide--notice" id="promo-hours" role="group" aria-roledescription="diapositiva" aria-label="3 de 3: Horario y pedidos">
+            <article class="promo-slide promo-slide--notice" id="promo-hours" role="group" aria-roledescription="diapositiva" aria-label="2 de 2: Horario y pedidos">
               <div class="promo-copy">
                 <p class="promo-label"><span aria-hidden="true">✦</span> Un aviso para tu próximo antojo</p>
                 <h3>Las tardes saben<br><em>mejor aquí.</em></h3>
@@ -133,11 +115,10 @@
             </article>
           </div>
           <div class="promo-controls" hidden>
-            <span class="promo-counter" aria-hidden="true"><b id="promoCurrent">01</b> <span>/ 03</span></span>
+            <span class="promo-counter" aria-hidden="true"><b id="promoCurrent">01</b> <span>/ 02</span></span>
             <div class="promo-dots" aria-label="Elegir un aviso">
-              <button type="button" data-promo-slide="0" aria-controls="promo-season" aria-label="Ver aviso 1: Edición de temporada" aria-current="true"></button>
-              <button type="button" data-promo-slide="1" aria-controls="promo-berry" aria-label="Ver aviso 2: Berry Bloom"></button>
-              <button type="button" data-promo-slide="2" aria-controls="promo-hours" aria-label="Ver aviso 3: Horario y pedidos"></button>
+              <button type="button" data-promo-slide="0" aria-current="true" aria-controls="promo-berry" aria-label="Ver aviso 1: Berry Bloom"></button>
+              <button type="button" data-promo-slide="1" aria-controls="promo-hours" aria-label="Ver aviso 2: Horario y pedidos"></button>
             </div>
             <div class="promo-arrows">
               <button type="button" id="promoPrevious" aria-controls="promoSlides" aria-label="Aviso anterior"><span aria-hidden="true">←</span></button>
@@ -164,7 +145,6 @@
         <a href="#saladas">Saladas</a>
         <a href="#crepe-al-gusto">Al gusto</a>
         <a href="#fresas-con-crema">Fresas con crema</a>
-        <a href="#temporada">Temporada</a>
       </div>
     </nav>
 
@@ -368,29 +348,6 @@
       </div>
     </section>
 
-    <section class="season" id="temporada" aria-labelledby="season-heading">
-      <div class="season-image">
-        <img src="../../assets/crepes/crepa-de-temporada.png" alt="Calaverita de mis Amores, crepa de temporada CABELKI" loading="lazy" decoding="async">
-      </div>
-      <div class="season-copy">
-        <p class="section-index">06 — Edición de temporada</p>
-        <p class="overline overline--light">Solo por temporada</p>
-        <h2 id="season-heading">Calaverita<br><em>de mis Amores</em></h2>
-        <p class="season-description">Nuestra crepa de la temporada: calabaza en tacha con un toque de canela, cremosa y con el crujido de la nuez caramelizada. Cuando se acabe la temporada, se va…</p>
-        <ul class="ingredient-list" aria-label="Ingredientes principales">
-          <li>Calabaza en tacha</li>
-          <li>Queso crema</li>
-          <li>Canela</li>
-          <li>Nuez</li>
-          <li>Dulce de leche</li>
-        </ul>
-        <div class="season-order">
-          <span><small>Hasta agotar existencias</small><strong>$134</strong></span>
-          <a class="round-action" href="#contacto" aria-label="Ordenar la crepa de temporada">&rarr;</a>
-        </div>
-      </div>
-    </section>
-
     <section class="experience" id="experiencia">
       <div class="section-shell">
         <header class="experience-heading">
@@ -403,7 +360,7 @@
             <span>01</span>
             <div class="experience-icon" aria-hidden="true">✦</div>
             <h3>Elige tu antojo</h3>
-            <p>Encuentra tu favorita entre recetas dulces, saladas y creaciones de temporada.</p>
+            <p>Encuentra tu favorita entre recetas dulces y saladas.</p>
           </article>
           <article>
             <span>02</span>
